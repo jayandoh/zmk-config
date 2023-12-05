@@ -1,0 +1,12 @@
+# Copyright (c) 2023 Jay Oh
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SHIFTY
+
+config ZMK_KEYBOARD_NAME
+    default "shifty"
+
+config SPI
+	default y
+
+endif 
