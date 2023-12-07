@@ -14,6 +14,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble 
-    shield: shifty60
+    shield: shifty
   - board: seeeduino_xiao_ble
-    shield: shifty60
+    shield: settings_reset
