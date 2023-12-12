@@ -1,2 +1,64 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <13>;
+        rows = <5>;
+        >;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&shift_reg 15 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 14 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 13 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 12 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 11 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 10 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 9 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 8 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 7 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 6 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 5 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 4 (GPIO_ACTIVE_HIGH)>
+            , <&shift_reg 0 (GPIO_ACTIVE_HIGH)>
+            ;
+
+        row-gpios
+            = <&xiao_d 0(GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 1(GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 2(GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 3(GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 4(GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+};
+
+&xiao_spi {
+  status = "okay";
+
+  cs-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>, <&xiao_d 6 GPIO_ACTIVE_HIGH>;
+  shift_reg: 595@0 {
+    compatible = "zmk, gpio-595";
+    status = "okay";
+    gpio-controller;
+    spi-max-frequency = <200000>;
+    #gpio-cells = <2>;
+    reg = <0>;
+    label = "4HC595";
+    ngpios = <16>;
+  };
+};
+
+&xiao_serial { 
+  status = "disabled"; 
+};
