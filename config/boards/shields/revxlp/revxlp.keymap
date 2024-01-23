@@ -23,8 +23,8 @@
 
         nav_layer {
             bindings = <
-       &kp ESC      &none      &none      &none       &none          &none         &none         &none          &kp UARW    &none      &kp PSCRN &kp DEL
-       &none        &none      &none      &none       &none          &none         &none         &kp LARW       &kp DARW    &kp RAWR   &none     &kp INS
+       &kp ESC      &none      &none      &none       &none          &none         &none         &none          &kp UP      &none      &kp PSCRN &kp DEL
+       &none        &none      &none      &none       &none          &none         &none         &kp LEFT       &kp DOWN    &kp RIGHT  &none     &kp INS
        &none        &none      &none      &none       &none          &none         &none         &kp HOME       &kp END     &kp PG_UP  &kp PG_DN &none
                                           &none       &none          &none         &none         &none          &none
             >;
