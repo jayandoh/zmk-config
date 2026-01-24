@@ -2,9 +2,9 @@ name: Build ZMK firmware
 
 on:
   push:
-    branches: [ "lily58" ]
+    branches: [ "lily58", "lily58_tps43" ]
   pull_request:
-    branches: [ "lily58" ]
+    branches: [ "lily58", "lily58_tps43" ]
   workflow_dispatch:
 
 jobs:
