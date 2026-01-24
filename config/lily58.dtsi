@@ -21,16 +21,6 @@
         triggers-per-rotation = <20>;
     };
 
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        tps43_split: tps43_split@74 {
-            compatible = "zmk,input-split";
-            reg = <0x74>;
-        };
-    };
-
     tps43_input: tps43_input {
         compatible = "zmk,input-listener";
         device = <&tps43>;
