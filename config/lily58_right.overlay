@@ -27,7 +27,3 @@
         switch-xy;
     };
 };
-
-&tps43_split {
-    device = <&tps43>;
-};
