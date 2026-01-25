@@ -1,6 +1,5 @@
 #include "lily58.dtsi"
 
-&right_encoder { status = "okay"; };
 &left_encoder { status = "disabled"; };
 
 &pro_micro_i2c {
@@ -10,8 +9,8 @@
         compatible = "azoteq,iqs5xx";
         reg = <0x74>;
 
-        rdy-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;  /* Ready pin */
-        reset-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;  /* Reset pin */
+        rdy-gpios = <&pro_micro 21 GPIO_ACTIVE_LOW>;
+        reset-gpios = <&pro_micro 20 GPIO_ACTIVE_HIGH>;
 
         one-finger-tap;
         press-and-hold;
