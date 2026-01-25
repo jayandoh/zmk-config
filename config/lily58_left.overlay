@@ -1,4 +1,5 @@
 #include "lily58.dtsi"
 
 &left_encoder { status = "okay"; };
+&right_encoder { status = "disabled"; };
 &tps43_listener { status = "okay"; };

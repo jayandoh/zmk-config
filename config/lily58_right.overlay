@@ -1,5 +1,6 @@
 #include "lily58.dtsi"
 
+&right_encoder { status = "disabled"; };
 &left_encoder { status = "disabled"; };
 
 &pro_micro_i2c {
