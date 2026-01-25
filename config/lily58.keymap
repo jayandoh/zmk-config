@@ -38,8 +38,7 @@
             >;
 
             sensor-bindings =
-                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>,
-                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>;
+                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>;
         };
 
         alternative_layer {
@@ -52,8 +51,7 @@
             >;
 
             sensor-bindings =
-                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>,
-                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>;
+                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>;
         };
 
         esc+fn+nav {
