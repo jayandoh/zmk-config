@@ -11,8 +11,8 @@
 
 &msc {
     delay-ms = <0>;
-    time-to-max-speed-ms = <40>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <120>;
+            tap-ms = <60>;
         };
     };
 
@@ -38,8 +38,8 @@
             >;
 
             sensor-bindings =
-                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>,
-                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>;
+                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>,
+                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>;
         };
 
         alternative_layer {
@@ -52,8 +52,8 @@
             >;
 
             sensor-bindings =
-                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>,
-                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>;
+                <&enc_scroll MOVE_Y(-30) MOVE_Y(30)>,
+                <&enc_scroll MOVE_Y(-40) MOVE_Y(40)>;
         };
 
         esc+fn+nav {
@@ -81,4 +81,3 @@
         };
     };
 };
-
